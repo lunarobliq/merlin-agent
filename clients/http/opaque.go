@@ -28,7 +28,7 @@ import (
 
 	// Internal
 	"github.com/Ne0nd0g/merlin-agent/cli"
-	o "github.com/Ne0nd0g/merlin-agent/crypto/opaque"
+	"github.com/Ne0nd0g/merlin-agent/crypto/opaque"
 )
 
 // opaqueAuth is the top-level function that subsequently runs OPAQUE registration and authentication
