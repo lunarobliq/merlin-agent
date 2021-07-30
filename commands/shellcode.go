@@ -26,7 +26,7 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/jobs"
 
 	// Internal
-	"github.com/lunarobliq/merlin-agent/cli"
+	"github.com/Ne0nd0g/merlin-agent/cli"
 )
 
 // ExecuteShellcode instructs the agent to load and run shellcode according to the input job
