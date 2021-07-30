@@ -31,7 +31,7 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/opaque"
 
 	// Internal
-	"github.com/lunarobliq/merlin-agent/cli"
+	"github.com/Ne0nd0g/merlin-agent/cli"
 	"github.com/Ne0nd0g/merlin/pkg/core"
 )
 
