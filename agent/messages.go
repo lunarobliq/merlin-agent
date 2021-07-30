@@ -27,7 +27,7 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/opaque"
 
 	// Internal
-	"github.com/Ne0nd0g/merlin-agent/cli"
+	"github.com/lunarobliq/merlin-agent/cli"
 )
 
 // messageHandler processes an input message from the server and adds it to the job channel for processing by the agent
