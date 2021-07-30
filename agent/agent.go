@@ -35,9 +35,9 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/messages"
 
 	// Internal
-	"github.com/Ne0nd0g/merlin-agent/cli"
-	"github.com/Ne0nd0g/merlin-agent/clients"
-	"github.com/Ne0nd0g/merlin-agent/core"
+	"github.com/lunarobliq/merlin-agent/cli"
+	"github.com/lunarobliq/merlin-agent/clients"
+	"github.com/lunarobliq/merlin-agent/core"
 )
 
 // GLOBAL VARIABLES
