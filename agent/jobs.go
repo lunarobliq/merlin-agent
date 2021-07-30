@@ -27,8 +27,8 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/messages"
 
 	// Internal
-	"github.com/lunarobliq/merlin-agent/cli"
-	"github.com/lunarobliq/merlin-agent/commands"
+	"github.com/Ne0nd0g/merlin-agent/cli"
+	"github.com/Ne0nd0g/merlin-agent/commands"
 )
 
 var jobsIn = make(chan jobs.Job, 100)  // A channel of input jobs for the agent to handle
