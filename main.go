@@ -27,9 +27,9 @@ import (
 	"github.com/fatih/color"
 
 	// Internal
-	"github.com/Ne0nd0g/merlin-agent/agent"
-	"github.com/Ne0nd0g/merlin-agent/clients/http"
-	"github.com/Ne0nd0g/merlin-agent/core"
+	"github.com/lunarobliq/merlin-agent/agent"
+	"github.com/lunarobliq/merlin-agent/clients/http"
+	"github.com/lunarobliq/merlin-agent/core"
 )
 
 // GLOBAL VARIABLES
