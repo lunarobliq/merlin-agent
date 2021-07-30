@@ -45,9 +45,9 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/messages"
 
 	// Internal
-	"github.com/Ne0nd0g/merlin-agent/cli"
-	"github.com/Ne0nd0g/merlin-agent/clients"
-	"github.com/Ne0nd0g/merlin-agent/crypto/opaque"
+	"github.com/lunarobliq/merlin-agent/cli"
+	"github.com/lunarobliq/merlin-agent/clients"
+	"github.com/lunarobliq/merlin-agent/crypto/opaque"
 )
 
 // Client is a type of MerlinClient that is used to send and receive Merlin messages from the Merlin server
