@@ -26,8 +26,8 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/messages"
 
 	// Merlin
-	merlinHTTP "github.com/lunarobliq/merlin-agent/clients/http"
-	testserver "github.com/lunarobliq/merlin-agent/test/server"
+	merlinHTTP "github.com/Ne0nd0g/merlin-agent/clients/http"
+	testserver "github.com/Ne0nd0g/merlin-agent/test/server"
 )
 
 var agentConfig = Config{
