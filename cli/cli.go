@@ -22,7 +22,7 @@ import (
 	"github.com/fatih/color"
 
 	// Internal
-	"github.com/lunarobliq/merlin-agent/core"
+	"github.com/Ne0nd0g/merlin-agent/core"
 )
 
 const (
