@@ -30,8 +30,8 @@ import (
 	"github.com/Ne0nd0g/merlin/pkg/messages"
 
 	// Internal
-	"github.com/Ne0nd0g/merlin-agent/cli"
-	"github.com/Ne0nd0g/merlin-agent/core"
+	"github.com/lunarobliq/merlin-agent/cli"
+	"github.com/lunarobliq/merlin-agent/core"
 )
 
 // control makes configuration changes to the agent
