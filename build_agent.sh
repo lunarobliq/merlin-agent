@@ -28,6 +28,8 @@ func_Build_merlin_Agent(){
         [yY][eE][sS]|[yY])
   cd /opt/merlin-agent
   echo "[*] Building EXE agents in Docker"
+  go mod download github.com/Ne0nd0g/merlin-agent
+  go mod download github.com/Ne0nd0g/merlin
   export GOOS=windows GOARCH=amd64;garble -tiny build -trimpath -ldflags "-s -w -X main.build=bdf7a31107e196854b524fd7d3ae8440c169412d -X github.com/lunarobliq/merlin-agent/agent.build=bdf7a31107e196854b524fd7d3ae8440c169412d -X main.protocol=$ARG_PROTO -X main.url=$ARG_URL -X main.host=$Host -X main.psk=$ARG_PSK -X main.proxy=$ARG_PROXY -X main.sleep=$ARG_SLEEP -X main.useragent=$useragent -H=windowsgui -buildid=" -gcflags=all=-trimpath=/go -asmflags=all=-trimpath=/go -o /opt/artifacts/$Filename.exe ./main.go
   echo "[*] Building DLL agents in Docker"
   cd /opt/merlin-agent-dll
