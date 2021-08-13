@@ -43,3 +43,4 @@ func_Build_merlin_Agent(){
 }
 
 func_Build_merlin_Agent
+echo "Filename is: "$Filename
