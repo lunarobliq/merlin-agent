@@ -48,5 +48,5 @@ func_Build_merlin_Agent(){
 }
 
 func_Build_merlin_Agent
-ls /opt/artifacts/
+ls -la /opt/artifacts/
 echo "Filename is: "$Filename
